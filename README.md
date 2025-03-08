@@ -9,13 +9,6 @@ Aplicación ReactJS para generar códigos QR personalizados con diferentes forma
   - **Email** (dirección completa)
   - **URL** (enlaces web)
   - **WiFi** (credenciales de red)
-- Interfaz moderna con tema oscuro 🌓
-- Animaciones fluidas y efectos visuales
-- Diseño 100% responsive 📱💻
-- Previsualización en tiempo real del QR
-- Botón de descarga integrado (próximamente)
-- Validación de campos automática
-- Sistema de temas con Context API
 
 ## Instalación
 
@@ -59,7 +52,7 @@ src/
 | -------------------------------- | --------------------------------------- |
 | ![Menú](./public/screenshot.png) | ![Formulario](./public/screenshot2.png) |
 
-## Roadmap 🗺️
+## Roadmap 
 
 - [ ] Descarga directa de QR
 - [ ] Historial de generaciones
@@ -67,7 +60,7 @@ src/
 - [ ] Soporte para más tipos de QR
 - [ ] Sistema de plantillas
 
-## Contribución 🤝
+## Contribución 
 
 ¡Las contribuciones son bienvenidas! Sigue estos pasos:
 
@@ -77,6 +70,6 @@ src/
 4. Push al branch (`git push origin feature/nueva-funcionalidad`)
 5. Abre un Pull Request
 
-## Licencia 📄
+## Licencia 
 
 Este proyecto está bajo la licencia MIT
