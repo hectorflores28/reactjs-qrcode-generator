@@ -1,0 +1,55 @@
+.container {
+    flex: 1;
+    min-height: 100vh;
+    padding: 2rem;
+    position: relative;
+  }
+  
+  .backButton {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    transition: all 0.3s;
+  }
+  
+  .backButton:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .formContainer {
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 50px;
+  }
+  
+  .inputField {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 4px;
+  }
+  
+  .qrPreview {
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+  }
+  
+  .qrCaption {
+    color: #fff;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }

@@ -1,0 +1,26 @@
+.menuContainer {
+    background: rgba(26, 26, 46, 0.7); /* Opacidad 70% */
+    padding: 20% 0 0 20%;
+    height: 100vh;
+    position: fixed;
+    width: 20%;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+    display: block;
+    padding: 15px;
+    transition: color 0.3s;
+  }
+  
+  li a:hover {
+    color: #0f3460;
+  }
