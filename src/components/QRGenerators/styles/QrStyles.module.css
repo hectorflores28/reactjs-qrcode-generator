@@ -1,57 +1,67 @@
-.container {
-    flex: 1;
-    min-height: 100vh;
-    padding: 2rem;
-    position: relative;
-    z-index: 1;
-  }
-  
-  
-  .backButton {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+/* Botón de regreso mejorado */
+.backButton {
     position: absolute;
-    top: 20px;
-    left: 20px;
-    padding: 10px 15px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 5px;
-    transition: all 0.3s;
+    top: 30px;
+    left: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
   }
   
-  .backButton:hover {
-    background: rgba(255, 255, 255, 0.1);
+  .backButton svg {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
   }
   
+  .backButton:hover svg {
+    transform: scale(1.1);
+  }
+  
+  /* Diseño de formulario y QR */
   .formContainer {
-    max-width: 600px;
-    margin: 0 auto;
-    padding-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    align-items: start;
   }
   
-  .inputField {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: #fff;
-    font-size: 1rem;
-    border-radius: 4px;
+  .inputGroup {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
   
-  .qrPreview {
-    margin-top: 40px;
+  .qrWrapper {
+    position: sticky;
+    top: 100px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     text-align: center;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
   }
   
-  .qrCaption {
-    color: #fff;
-    margin-top: 15px;
-    font-size: 0.9rem;
-    opacity: 0.8;
+  /* Para formularios simples (email/url) */
+  .singleColumnLayout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .formContainer {
+      grid-template-columns: 1fr;
+    }
+    
+    .qrWrapper {
+      position: static;
+      margin-top: 2rem;
+    }
   }

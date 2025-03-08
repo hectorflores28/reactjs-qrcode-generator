@@ -1,0 +1,96 @@
+.menuContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .linksContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* Reducimos el espacio entre elementos */
+    transform: translateY(-5%); /* Ajuste fino de posición vertical */
+  }
+  
+  .linkItem {
+    font-size: 1.8rem;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+    padding: 0.8rem 2rem; /* Más padding para mejor tacto */
+    position: relative;
+    border-radius: 4px;
+  }
+  
+  /* Efecto hover mejorado */
+  .linkItem:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateX(10px);
+  }
+  
+  /* Línea decorativa al hacer hover */
+  .linkItem:hover::after {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background: currentColor;
+    border-radius: 50%;
+  }
+  
+  /* Animación suave para el punto */
+  .linkItem::after {
+    transition: opacity 0.3s ease;
+    opacity: 0;
+  }
+  
+  .linkItem:hover::after {
+    opacity: 1;
+  }
+  .title {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .card {
+    padding: 2rem;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card h3 {
+    color: #4db8ff;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .card p {
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-size: 1rem;
+  }

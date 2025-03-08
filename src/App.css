@@ -70,3 +70,43 @@
   .menu-item:hover {
     color: #4db8ff !important;
   }
+  
+  /* Fondo animado */
+body::before {
+    content: '';
+    position: fixed;
+    width: 150vmax;
+    height: 150vmax;
+    background: radial-gradient(
+      circle,
+      rgba(15, 52, 96, 0.8) 0%,
+      rgba(26, 26, 46, 0.2) 70%
+    );
+    animation: rotate 20s linear infinite;
+    top: -50vmax;
+    left: -50vmax;
+    z-index: 0;
+  }
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Capa oscura */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: -1;
+  }
+  /* Contenedor principal */
+    .app-wrapper {
+    position: relative;
+    min-height: 100vh;
+    color: white;
+    z-index: 1;
+  }

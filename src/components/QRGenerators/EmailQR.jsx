@@ -1,50 +1,31 @@
-import { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import { QRCodeSVG } from 'qrcode.react';
+import { useNavigate } from 'react-router-dom';
 import styles from './styles/QrStyles.module.css';
-import { ThemeContext } from '../../context/ThemeContext';
 
 const EmailQR = () => {
-  const { colors } = useContext(ThemeContext);
-  const [emailData, setEmailData] = useState({
-    address: '',
-    subject: ''
-  });
-
-  const generateMailTo = () => {
-    return `mailto:${emailData.address}?subject=${encodeURIComponent(emailData.subject)}`;
-  };
+  const navigate = useNavigate();
+  const [email, setEmail] = useState('');
 
   return (
-    <div className={styles.container} style={{ background: colors.gradient }}>
-      <Link to="/" className={styles.backButton}>← Volver al menú</Link>
+    <div className={styles.fullscreenContainer}>
+      <button onClick={() => navigate('/')} className={styles.backButton}>
+        ← Volver al Menú
+      </button>
       
       <div className={styles.formContainer}>
+        <h2>QR de Email</h2>
         <input
           type="email"
           placeholder="correo@ejemplo.com"
-          value={emailData.address}
-          onChange={(e) => setEmailData({...emailData, address: e.target.value})}
-          className={styles.inputField}
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className={styles.singleInput}
         />
         
-        <input
-          type="text"
-          placeholder="Asunto del correo"
-          value={emailData.subject}
-          onChange={(e) => setEmailData({...emailData, subject: e.target.value})}
-          className={styles.inputField}
-        />
-
-        {emailData.address && (
-          <div className={styles.qrPreview}>
-            <QRCodeSVG
-              value={generateMailTo()}
-              size={256}
-              fgColor={colors.accent}
-              bgColor="transparent"
-            />
-            <p className={styles.qrCaption}>Escanea para enviar correo</p>
+        {email && (
+          <div className={styles.qrWrapper}>
+            <QRCodeSVG value={`mailto:${email}`} size={300} />
           </div>
         )}
       </div>
