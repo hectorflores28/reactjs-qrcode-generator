@@ -1,1 +1,1 @@
-# REACTJS-QRCODE-GENERATOR
+# ReactJS QRCode Generator
