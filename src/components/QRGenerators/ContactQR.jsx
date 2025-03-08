@@ -29,15 +29,13 @@ END:VCARD`;
   return (
     <div className={styles.fullscreenContainer}>
       <button onClick={() => navigate('/')} className={styles.backButton}>
-        <svg viewBox="0 0 24 24" fill="none" stroke="#4db8ff" strokeWidth="2">
-          <circle cx="12" cy="12" r="10" fill="rgba(0,0,0,0.3)" />
+        <svg viewBox="0 0 24 24" fill="none">
           <path d="M15 18l-6-6 6-6"/>
         </svg>
       </button>
       
       <div className={styles.formContainer}>
-        <div>
-          <div className={styles.inputGroup}>
+        <div className={styles.inputGroup}>
           <input
             type="text"
             placeholder="Nombre"
@@ -74,7 +72,6 @@ END:VCARD`;
             value={formData.extension}
             onChange={(e) => setFormData({...formData, extension: e.target.value})}
           />
-        </div>
         </div>
         
         {formData.nombre && (

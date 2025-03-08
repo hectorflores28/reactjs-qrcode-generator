@@ -10,27 +10,31 @@ const EmailQR = () => {
   return (
     <div className={styles.fullscreenContainer}>
       <button onClick={() => navigate('/')} className={styles.backButton}>
-        ← Volver al Menú
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M15 18l-6-6 6-6"/>
+        </svg>
       </button>
       
       <div className={styles.formContainer}>
-        <h2>QR de Email</h2>
-        <input
-          type="email"
-          placeholder="correo@ejemplo.com"
+        <div className={styles.inputGroup}>
+          <input
+            type="email"
+            placeholder="correo@ejemplo.com"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           className={styles.singleInput}
-        />
-        
-        {email && (
-          <div className={styles.qrWrapper}>
-            <QRCodeSVG value={`mailto:${email}`} size={300} />
+          />
           </div>
-        )}
+          
+          {email && (
+            <div className={styles.qrWrapper}>
+              <QRCodeSVG value={`mailto:${email}`} size={300} />
+              <p className={styles.qrCaption}>Escanea para enviar email</p>
+            </div>
+          )}
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  };
 
 export default EmailQR;
