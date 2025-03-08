@@ -3,7 +3,9 @@
     min-height: 100vh;
     padding: 2rem;
     position: relative;
+    z-index: 1;
   }
+  
   
   .backButton {
     color: #fff;
