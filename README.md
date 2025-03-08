@@ -1,1 +1,1 @@
-# reactjs-qrcode-generator
+# REACTJS-QRCODE-GENERATOR
