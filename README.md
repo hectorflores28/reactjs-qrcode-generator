@@ -1,3 +1,5 @@
 # ReactJS QRCode Generator
 
-npm install react-router-dom qrcode.react
+![Captura de pantalla](./public/screenshot.png)
+
+<!-- npm install react-router-dom qrcode.react@latest -->

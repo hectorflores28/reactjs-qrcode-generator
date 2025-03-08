@@ -9,3 +9,12 @@ export const ThemeContext = createContext({
     gradient: 'linear-gradient(to right, #0f3460, #1a1a2e)'
   }
 });
+export const ThemeProvider = ({ children }) => {
+    const theme = {
+      colors: {
+        text: '#FFFFFF',
+        accent: '#4db8ff'
+      }
+    };
+    return <ThemeContext.Provider value={theme}>{children}</ThemeContext.Provider>;
+  };

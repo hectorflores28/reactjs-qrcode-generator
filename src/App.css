@@ -1,0 +1,72 @@
+/* Fondo animado */
+.app-wrapper::before {
+    content: '';
+    position: fixed;
+    width: 150vmax;
+    height: 150vmax;
+    background: radial-gradient(
+      circle,
+      rgba(15, 52, 96, 0.8) 0%,
+      rgba(26, 26, 46, 0.2) 70%
+    );
+    animation: rotate 20s linear infinite;
+    top: -50vmax;
+    left: -50vmax;
+    z-index: 0;
+  }
+  
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Capa oscura */
+  .app-wrapper::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 1;
+  }
+  
+  /* Contenedor principal */
+  .app-wrapper {
+    position: relative;
+    min-height: 100vh;
+    color: white; /* Color de texto general */
+  }
+  
+  /* Menú lateral */
+  .menu-container {
+    position: fixed;
+    width: 20%;
+    height: 100vh;
+    z-index: 3;
+    padding: 20% 0 0 20%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+  }
+  
+  /* Contenido */
+  .content-container {
+    position: relative;
+    z-index: 2;
+    margin-left: 20%;
+    padding: 2rem;
+  }
+  
+  /* Textos del menú */
+  .menu-item {
+    color: #fff !important;
+    font-size: 1.2rem;
+    margin: 15px 0;
+    display: block;
+    text-decoration: none;
+  }
+  
+  .menu-item:hover {
+    color: #4db8ff !important;
+  }

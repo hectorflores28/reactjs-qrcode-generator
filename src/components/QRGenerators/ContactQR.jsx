@@ -24,6 +24,7 @@ const ContactQR = () => {
           type="text" 
           placeholder="Nombre" 
           onChange={(e) => setContactData({...contactData, name: e.target.value})}
+          className={styles.inputField}
         />
         {/* Agrega más inputs para teléfono y email */}
         {contactData.name && (

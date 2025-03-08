@@ -1,0 +1,136 @@
+/* Base styles */
+.app-wrapper {
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+  }
+  
+  /* Fondo animado */
+  .app-wrapper::before {
+    animation: rotate 25s linear infinite;
+  }
+  
+  /* Menú lateral */
+  .menuContainer {
+    width: 25%;
+    padding: 15% 0 0 15%;
+    backdrop-filter: blur(12px);
+  }
+  
+  /* Contenido principal */
+  .content-container {
+    margin-left: 25%;
+    padding: 1.5rem;
+  }
+  
+  /* Media Queries para 1080x1448 y adaptación responsive */
+  @media (max-width: 1448px) and (orientation: portrait) {
+    .menuContainer {
+      width: 30%;
+      padding: 20% 0 0 15%;
+    }
+    
+    .content-container {
+      margin-left: 30%;
+      padding: 1rem;
+    }
+    
+    .menuTitle {
+      font-size: 1.1rem !important;
+    }
+    
+    .menuSubtitle {
+      font-size: 1.3rem !important;
+    }
+  }
+  
+  @media (max-width: 1080px) {
+    .menuContainer {
+      width: 100%;
+      height: auto;
+      position: relative;
+      padding: 2rem;
+      backdrop-filter: blur(8px);
+    }
+    
+    .content-container {
+      margin-left: 0;
+      padding: 1rem;
+    }
+    
+    .menuTitle {
+      display: none;
+    }
+    
+    .menuSubtitle {
+      font-size: 1.2rem !important;
+      padding: 0.8rem !important;
+    }
+    
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    
+    li {
+      margin-bottom: 0 !important;
+    }
+    
+    li::after {
+      display: none !important;
+    }
+  }
+  
+  @media (max-height: 700px) {
+    .menuContainer {
+      padding-top: 5%;
+    }
+    
+    .content-container {
+      padding: 0.5rem;
+    }
+    
+    .qrPreview {
+      margin-top: 1rem;
+    }
+  }
+  
+  /* Ajustes para pantallas muy altas (1448px de altura) */
+  @media (min-height: 1448px) {
+    .app-wrapper::before {
+      width: 200vmax;
+      height: 200vmax;
+      top: -75vmax;
+      left: -75vmax;
+    }
+    
+    .menuContainer {
+      padding-top: 25%;
+    }
+    
+    .content-container {
+      padding: 3rem;
+    }
+    
+    .menuTitle {
+      font-size: 1.5rem !important;
+    }
+    
+    .menuSubtitle {
+      font-size: 2rem !important;
+    }
+  }
+  
+  /* Ajustes para hover en dispositivos táctiles */
+  @media (hover: none) {
+    .menuContainer li a:hover {
+      transform: none;
+      background: transparent;
+    }
+    
+    .menuContainer li a:hover::before {
+      opacity: 0;
+    }
+  }

@@ -1,50 +1,69 @@
-.menuContainer {
-  background: rgba(10, 10, 20, 0.7); /* Negro con 70% de opacidad */
-  backdrop-filter: blur(5px);
-  height: 100vh;
-  position: fixed;
-  width: 20%;
-  padding: 20% 0 0 20%;
-  z-index: 2; /* Asegura que el menú esté sobre el fondo */
-  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.3);
-}
-
-ul {
+.menuContainer ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-li a {
-  color: #fff !important;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 1.2rem;
-  display: block;
-  padding: 15px;
-  transition: all 0.3s;
-  position: relative;
+.menuContainer li {
+  margin-bottom: 25px;
 }
 
-li a:hover {
-  color: #4db8ff !important;
+.menuContainer a {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.menuTitle {
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.menuSubtitle {
+  color: #4db8ff;
+  font-size: 1.4rem !important;
+  font-weight: 700 !important;
+  margin-top: 5px;
+}
+
+/* Efecto hover */
+.menuContainer li:hover .menuTitle {
+  color: #fff !important;
+}
+
+.menuContainer li:hover .menuSubtitle {
+  color: #7ad0ff !important;
   transform: translateX(10px);
 }
 
-li a::before {
+/* Borde decorativo */
+.menuContainer li:not(:last-child)::after {
   content: '';
-  position: absolute;
-  left: -20px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 8px;
-  height: 8px;
-  background: #4db8ff;
-  border-radius: 50%;
-  opacity: 0;
-  transition: opacity 0.3s;
+  display: block;
+  width: 80%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 20px 0;
 }
 
-li a:hover::before {
-  opacity: 1;
+.menuContainer {
+  position: fixed;
+  width: 20%;
+  height: 100vh;
+  padding: 20% 0 0 20%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  z-index: 1000; 
+}
+
+.menuItem {
+  color: #fff !important;
+  font-size: 1.4rem;
+  margin: 15px 0;
+  text-decoration: none;
+  display: block;
 }
