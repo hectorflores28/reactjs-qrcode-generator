@@ -28,6 +28,20 @@ END:VCARD`;
 
   return (
     <div className={styles.fullscreenContainer}>
+      <div className={styles.particles}>
+        {Array.from({ length: 20 }, (_, i) => (
+          <div
+            key={i}
+            className={styles.particle}
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 20}s`
+            }}
+          />
+        ))}
+      </div>
+
       <button onClick={() => navigate('/')} className={styles.backButton}>
         <svg viewBox="0 0 24 24" fill="none">
           <path d="M15 18l-6-6 6-6"/>
@@ -76,7 +90,14 @@ END:VCARD`;
         
         {formData.nombre && (
           <div className={styles.qrWrapper}>
-            <QRCodeSVG value={generateVCard()} size={300} />
+            <QRCodeSVG 
+              value={generateVCard()} 
+              size={300}
+              bgColor="white"
+              fgColor="#0f3460"
+              level="H"
+              includeMargin={true}
+            />
             <p>Escanea para guardar contacto</p>
           </div>
         )}
