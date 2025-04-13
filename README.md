@@ -11,7 +11,7 @@
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg)
 
 ## Características
-
+![Menú](./public/screenshot.png)![Formulario](./public/screenshot2.png)
 - Generación de códigos QR para:
   - Contactos
   - URLs
