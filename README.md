@@ -31,13 +31,6 @@
 - CSS Modules
 - QR Code React
 
-## Instalación
-
-```bash
-npm install
-npm start
-```
-
 ## Uso
 
 1. Selecciona el tipo de código QR que deseas generar
